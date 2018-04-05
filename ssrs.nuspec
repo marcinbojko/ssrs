@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
+    <id>ssrs</id>
+    <title>Microsoft SQL Server 2017 Reporting Services</title>
+    <version>14.0.600.689</version>
+    <authors>Microsoft</authors>
+    <owners>Marcin Bojko</owners>
+    <summary>SQL Server Reporting Services is a server-based reporting platform that provides comprehensive reporting functionality</summary>
+    <description>
+# Microsoft SQL Server 2017 Reporting Services
+
+## Description
+Create, deploy, and manage mobile and paginated reports
+SQL Server Reporting Services is a solution that customers deploy on their own premises for creating, publishing, and managing reports, then delivering them to the right users in different ways, whether that’s viewing them in web browser, on their mobile device, or as an email in their in-box.
+
+For SQL Server 2016, Reporting Services offers an updated suite of products:
+
+* 'Traditional' paginated reports brought up to date, so you can create modern-looking reports, with updated tools and new features for creating them.
+* New mobile reports with a responsive layout that adapts to different devices and the different ways you hold them.
+* A modern web portal you can view in any modern browser. In the new portal, you can organize and display mobile and paginated Reporting Services reports and KPIs. You can also store Excel workbooks on the portal.
+
+## Features
+
+* Install and uninstall via Chocolatey
+* Supports 64-bit version
+
+## Changelog
+
+2018-04-04 Version 14.0.600.689
+* initial build
+
+## Usage
+
+### Package Parameters
+* `/Edition=` - When installing you need to specify an edition
+  * Eval
+  * Expr
+  * Dev
+
+  If no edition is given package will install with `Dev` as default.
+
+### Direct install
+
+```
+choco install ssrs --params "/Edition=Eval|Expr|Dev"
+```
+
+### YAML (Foreman, puppetlabs/chocolatey module)
+
+```
+ssrs:
+  ensure: latest
+  install_option:
+  - '--params'
+  - '"/Edition=Eval|Expr|Dev"'
+```
+
+    </description>
+    <projectUrl>https://docs.microsoft.com/en-us/sql/reporting-services/create-deploy-and-manage-mobile-and-paginated-reports</projectUrl>
+    <packageSourceUrl>https://github.com/marcinbojko/ssrs</packageSourceUrl>
+    <docsUrl>https://docs.microsoft.com/en-us/sql/reporting-services/create-deploy-and-manage-mobile-and-paginated-reports</docsUrl>
+    <iconUrl>https://www.dropbox.com/s/b1jfbvuiyznbvn1/ssrs.svg?dl=0</iconUrl>
+    <!--<projectSourceUrl></projectSourceUrl>
+    <mailingListUrl></mailingListUrl>-->
+    <bugTrackerUrl>https://feedback.azure.com/forums/908035-sql-server</bugTrackerUrl>
+    <tags>microsoft sql reporting services rs ssrs  admin</tags>
+    <copyright>Microsoft</copyright>
+    <licenseUrl>https://download.microsoft.com/download/B/C/0/BC0B2EA7-D99D-42FB-9439-2C56880CAFF4/SQL_Server_2017_Licensing_Datasheet.pdf</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <releaseNotes>https://docs.microsoft.com/en-us/sql/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs</releaseNotes>
+    <dependencies>
+      <dependency id="chocolatey-core.extension" version="1.3.0" />
+    </dependencies>
+  </metadata>
+    <files>
+      <file src="tools\**" target="tools" />
+      <file src="icons\**" target="icons" />
+    </files>
+</package>
