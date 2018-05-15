@@ -1,6 +1,7 @@
 # Microsoft SQL Server 2017 Reporting Services
 
 ## Description
+
 Create, deploy, and manage mobile and paginated reports
 SQL Server Reporting Services is a solution that customers deploy on their own premises for creating, publishing, and managing reports, then delivering them to the right users in different ways, whether that’s viewing them in web browser, on their mobile device, or as an email in their in-box.
 
@@ -17,12 +18,20 @@ For SQL Server 2016, Reporting Services offers an updated suite of products:
 
 ## Changelog
 
-2018-04-04 Version 14.0.600.689
+### 2018-05-15 Version 14.0.600.744
+
+* removed `chocolatey-core.extension` dependency
+* added proper `iconurl`
+* version 14.0.600.744 from 26.04.2018
+
+### 2018-04-04 Version 14.0.600.689
+
 * initial build
 
 ## Usage
 
 ### Package Parameters
+
 * `/Edition=` - When installing you need to specify an edition
   * Eval
   * Expr

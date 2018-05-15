@@ -3,7 +3,7 @@
 $packageName        = 'ssrs'
 $scriptPath         = $(Split-Path $MyInvocation.MyCommand.Path)
 $url64              = "https://download.microsoft.com/download/E/6/4/E6477A2A-9B58-40F7-8AD6-62BB8491EA78/SQLServerReportingServices.exe"
-$checksum64         = "fd106ba6ee3883dc5eb2a2b3a443f1bf3a7c4ca00b7b4fb9821b4ae87731aeed"
+$checksum64         = "6909cb63a7aaf7d66d2a2c866c14e1f7e86c6c3d1ea931a0be4666e2e9d04bd8"
 $logfile            = "$env:TEMP\chocolatey\$($packageName)\$($packageName).MsiInstall.log"
 $logdir             = "$env:TEMP\chocolatey\$($packageName)"
 $killexec           = 0

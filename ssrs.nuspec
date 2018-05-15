@@ -5,7 +5,7 @@
     <!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
     <id>ssrs</id>
     <title>Microsoft SQL Server 2017 Reporting Services</title>
-    <version>14.0.600.689</version>
+    <version>14.0.600.744</version>
     <authors>Microsoft</authors>
     <owners>Marcin Bojko</owners>
     <summary>SQL Server Reporting Services is a server-based reporting platform that provides comprehensive reporting functionality</summary>
@@ -13,6 +13,7 @@
 # Microsoft SQL Server 2017 Reporting Services
 
 ## Description
+
 Create, deploy, and manage mobile and paginated reports
 SQL Server Reporting Services is a solution that customers deploy on their own premises for creating, publishing, and managing reports, then delivering them to the right users in different ways, whether that’s viewing them in web browser, on their mobile device, or as an email in their in-box.
 
@@ -29,12 +30,20 @@ For SQL Server 2016, Reporting Services offers an updated suite of products:
 
 ## Changelog
 
-2018-04-04 Version 14.0.600.689
+### 2018-05-15 Version 14.0.600.744
+
+* removed `chocolatey-core.extension` dependency
+* added proper `iconurl`
+* version 14.0.600.744 from 26.04.2018
+
+### 2018-04-04 Version 14.0.600.689
+
 * initial build
 
 ## Usage
 
 ### Package Parameters
+
 * `/Edition=` - When installing you need to specify an edition
   * Eval
   * Expr
@@ -44,25 +53,24 @@ For SQL Server 2016, Reporting Services offers an updated suite of products:
 
 ### Direct install
 
-```
+```cmd
 choco install ssrs --params "/Edition=Eval|Expr|Dev"
 ```
 
 ### YAML (Foreman, puppetlabs/chocolatey module)
 
-```
+```yaml
 ssrs:
   ensure: latest
   install_option:
   - '--params'
   - '"/Edition=Eval|Expr|Dev"'
 ```
-
     </description>
     <projectUrl>https://docs.microsoft.com/en-us/sql/reporting-services/create-deploy-and-manage-mobile-and-paginated-reports</projectUrl>
     <packageSourceUrl>https://github.com/marcinbojko/ssrs</packageSourceUrl>
     <docsUrl>https://docs.microsoft.com/en-us/sql/reporting-services/create-deploy-and-manage-mobile-and-paginated-reports</docsUrl>
-    <iconUrl>https://www.dropbox.com/s/b1jfbvuiyznbvn1/ssrs.svg?dl=0</iconUrl>
+    <iconUrl>https://raw.githubusercontent.com/marcinbojko/ssrs/master/icons/ssrs.png</iconUrl>
     <!--<projectSourceUrl></projectSourceUrl>
     <mailingListUrl></mailingListUrl>-->
     <bugTrackerUrl>https://feedback.azure.com/forums/908035-sql-server</bugTrackerUrl>
@@ -72,7 +80,6 @@ ssrs:
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <releaseNotes>https://docs.microsoft.com/en-us/sql/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs</releaseNotes>
     <dependencies>
-      <dependency id="chocolatey-core.extension" version="1.3.0" />
     </dependencies>
   </metadata>
     <files>
