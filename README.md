@@ -18,6 +18,10 @@ For SQL Server 2016, Reporting Services offers an updated suite of products:
 
 ## Changelog
 
+### 2018-11-05 Version 14.0.600.892
+
+* version 14.0.600.892 from 12.09.2018
+
 ### 2018-05-15 Version 14.0.600.744
 
 * removed `chocolatey-core.extension` dependency
