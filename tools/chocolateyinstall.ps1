@@ -3,11 +3,9 @@
 $packageName        = 'ssrs'
 $scriptPath         = $(Split-Path $MyInvocation.MyCommand.Path)
 $url64              = "https://download.microsoft.com/download/E/6/4/E6477A2A-9B58-40F7-8AD6-62BB8491EA78/SQLServerReportingServices.exe"
-$checksum64         = "bd0c482a4b0f381388ce512e7e38cd5e466b9e8945ebc632d0d3b0b2a8a2aa3a"
+$checksum64         = "00105d0ce5b622c878baa6caae120248ba4e5a3cc3f40e848b09209a1321942c"
 $logfile            = "$env:TEMP\chocolatey\$($packageName)\$($packageName).MsiInstall.log"
 $logdir             = "$env:TEMP\chocolatey\$($packageName)"
-$killexec           = 0
-$killexecprocess    = ""
 [regex]$editionparams = “(?i)^(Dev|Eval|Expr)$”
 
 
@@ -19,7 +17,7 @@ else {
          exit (1) }
 }
 
-Write-Output $($pp.Edition)
+Write-Output "Installing for SQL Server 2017 $($pp.Edition) Edition"
 #Let's check your TEMP derectory
     $statusCode = Test-Path $logdir
     if ($statusCode) {
@@ -39,11 +37,5 @@ $packageArgs = @{
   checksumType64= 'sha256'
   checksum64    = $checksum64
 }
-
-# Should we kill some exec ?
-    if ($killexec) {
-        Stop-Process -processname $killexecprocess -force
-        Start-Sleep -s 5
-    }
 
 Install-ChocolateyPackage @packageArgs

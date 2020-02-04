@@ -5,7 +5,7 @@
     <!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
     <id>ssrs</id>
     <title>Microsoft SQL Server 2017 Reporting Services</title>
-    <version>14.0.600.1274</version>
+    <version>14.0.600.1453</version>
     <authors>Microsoft</authors>
     <owners>Marcin Bojko</owners>
     <summary>SQL Server Reporting Services is a server-based reporting platform that provides comprehensive reporting functionality</summary>
@@ -29,6 +29,10 @@ For SQL Server 2016, Reporting Services offers an updated suite of products:
 * Supports 64-bit version
 
 ## Changelog
+
+### 2020-02-04 Version 14.0.600.1453
+
+* version 14.0.600.1453
 
 ### 2019-07-08 Version 14.0.600.1274
 
@@ -82,7 +86,7 @@ ssrs:
     <projectUrl>https://docs.microsoft.com/en-us/sql/reporting-services/create-deploy-and-manage-mobile-and-paginated-reports</projectUrl>
     <packageSourceUrl>https://github.com/marcinbojko/ssrs</packageSourceUrl>
     <docsUrl>https://docs.microsoft.com/en-us/sql/reporting-services/create-deploy-and-manage-mobile-and-paginated-reports</docsUrl>
-    <iconUrl>https://raw.githubusercontent.com/marcinbojko/ssrs/master/icons/ssrs.png</iconUrl>
+    <iconUrl>https://rawcdn.githack.com/marcinbojko/ssrs/ea29e268ae3c2095553e1f7dd135aa888f9452b0/icons/ssrs.png</iconUrl>
     <!--<projectSourceUrl></projectSourceUrl>
     <mailingListUrl></mailingListUrl>-->
     <bugTrackerUrl>https://feedback.azure.com/forums/908035-sql-server</bugTrackerUrl>
@@ -96,6 +100,5 @@ ssrs:
   </metadata>
     <files>
       <file src="tools\**" target="tools" />
-      <file src="icons\**" target="icons" />
     </files>
 </package>
