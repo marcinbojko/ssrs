@@ -18,6 +18,10 @@ For SQL Server 2016, Reporting Services offers an updated suite of products:
 
 ## Changelog
 
+### 2020-12-11
+
+* version 14.0.600.1669
+
 ### 2020-02-04 Version 14.0.600.1453
 
 * version 14.0.600.1453
